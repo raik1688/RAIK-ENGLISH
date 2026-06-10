@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raik Su | Professional Profile</title>
+    <meta name="description" content="Raik Su's Professional Profile Presentation. Focuses on acoustic and mechanical integration design, COMSOL simulation analysis, and AI-assisted acoustic development systems.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="presentation-body">
+    <!-- Top HUD Header -->
+    <header class="hud-header">
+        <div class="hud-header-left">
+            <span class="hud-title">Raik Su | Professional Profile</span>
+        </div>
+        <div class="hud-header-right">
+            <span class="slide-counter">Slide <strong id="currentSlideNum">1</strong> / 9</span>
+        </div>
+    </header>
+
+    <!-- Main Slide Slider Container -->
+    <div class="slider-container">
+        <div class="slide-wrapper" id="slideWrapper">
+            
+            <!-- SLIDE 1 -->
+            <section class="slide" data-slide-index="1">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <!-- Canvas for Slide 1 Floating Particles -->
+                    <canvas id="slide1Canvas" class="slide1-particle-canvas"></canvas>
+ 
+                    <!-- Cover Right Image & Floating Acoustics/AI Animations -->
+                    <div class="fade-up-item delay-1" style="position: absolute; left: 480px; top: 70px; width: 660px; height: 630px; z-index: 2;">
+                        <!-- Concentric Outward Ground Ripples (Behind laptop) -->
+                        <div class="ground-ripple-container" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;">
+                            <svg width="660" height="630" viewBox="0 0 660 630" style="overflow: visible; width: 100%; height: 100%;">
+                                <circle cx="380" cy="430" r="30" fill="none" stroke="rgba(79, 70, 229, 0.22)" stroke-width="1.0" vector-effect="non-scaling-stroke" class="ground-ripple ripple-1" />
+                                <circle cx="380" cy="430" r="30" fill="none" stroke="rgba(79, 70, 229, 0.22)" stroke-width="1.0" vector-effect="non-scaling-stroke" class="ground-ripple ripple-2" />
+                                <circle cx="380" cy="430" r="30" fill="none" stroke="rgba(79, 70, 229, 0.22)" stroke-width="1.0" vector-effect="non-scaling-stroke" class="ground-ripple ripple-3" />
+                                <circle cx="380" cy="430" r="30" fill="none" stroke="rgba(79, 70, 229, 0.22)" stroke-width="1.0" vector-effect="non-scaling-stroke" class="ground-ripple ripple-4" />
+                                <circle cx="380" cy="430" r="30" fill="none" stroke="rgba(79, 70, 229, 0.22)" stroke-width="1.0" vector-effect="non-scaling-stroke" class="ground-ripple ripple-5" />
+                                <!-- Tilted Planetary Orbit Path Line (Single Ring) -->
+                                <ellipse cx="330" cy="315" rx="270" ry="120" fill="none" stroke="rgba(79, 70, 229, 0.15)" stroke-width="1.2" stroke-dasharray="4 6" transform="rotate(-10, 330, 315)" />
+                            </svg>
+                        </div>
+
+                        <!-- Thinner laptop wireframe facing right-up with ground ripples -->
+                        <img src="assets/images/laptop_thin_right_ripple_clean_v2.png" alt="Raik Profile" style="width: 100%; height: 100%; object-fit: contain; position: relative; z-index: 2;">
+                        <!-- Floating Nodes Group (Orbiting Planets) -->
+                        <!-- 1. Acoustics Speaker Node (Inner Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-1">
+                                <i data-lucide="volume-2"></i>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">ACOUSTICS</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[SYSTEM INTEGRATION]</span>
+                        </div>
+                        
+                        <!-- 2. Sound Wave Node (Inner Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-2">
+                                <i data-lucide="activity"></i>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">WAVEFORM</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[FFT & WAVE ANALYZER]</span>
+                        </div>
+                        
+                        <!-- 3. Brain Node (Middle Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-3">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">COGNITIVE</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[NEURAL NETWORK]</span>
+                        </div>
+                        
+                        <!-- 4. AI Badge Node (Middle Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-1">
+                                <span style="font-size: 20px; font-weight: 800; color: var(--primary); font-family: var(--font-heading) !important;">AI</span>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">AI AUDIO</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[COMSOL ALGORITHM]</span>
+                        </div>
+                        
+                        <!-- 5. Human Profile Node (Middle Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-2">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">FREQUENCY</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[DSP OPTIMIZER]</span>
+                        </div>
+                        
+                        <!-- 6. Microphone Node (Outer Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-3">
+                                <i data-lucide="mic"></i>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">MEASUREMENT</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[ACOUSTIC TESTING]</span>
+                        </div>
+                        
+                        <!-- 7. Cube Node (Outer Shell) -->
+                        <div class="slide1-orbit-node" style="position: absolute; width: 68px; height: 110px; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto;">
+                            <div class="slide1-float-node ripple-delay-1">
+                                <i data-lucide="box"></i>
+                            </div>
+                            <span class="slide1-float-label" style="margin-top: 8px; position: static;">MECHANISM</span>
+                            <span class="slide1-float-sub" style="font-size: 8.5px; color: var(--text-muted); font-weight: 700; margin-top: 2px; letter-spacing: 0.03em; text-transform: uppercase; white-space: nowrap;">[3D CAD STRUCT]</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shape slide1-subtitle fade-up-item" style="left: 80px; top: 180px; width: 450px; font-size: 64px; font-weight: 800; color: var(--text-main); letter-spacing: -0.03em; font-family: var(--font-heading) !important; line-height: 1.15;">
+                        Professional<br>Profile
+                    </div>
+                    
+                    <div class="hero-name-card fade-up-item delay-2" style="left: 80px; top: 440px; width: 440px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; position: absolute; z-index: 10;">
+                        <div class="slide1-name" style="font-size: 38px; font-weight: 800; color: var(--text-main); margin-bottom: 12px; font-family: var(--font-heading) !important;">
+                            Raik Su
+                        </div>
+                        <div class="slide1-title" style="font-size: 14px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;">R&D Manager / Acoustic & Mechanical Integration</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 2 -->
+            <section class="slide" data-slide-index="2">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Educational & Work Background</div>
+                     
+                    <!-- Left Column: Education -->
+                    <div class="competency-card fade-up-item delay-1" style="left: 80px; top: 150px; width: 540px; height: 430px; padding: 35px; display: flex; flex-direction: column; justify-content: flex-start; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div style="display: flex; align-items: center; gap: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">
+                            <div class="minimal-icon-badge" style="margin-bottom: 0; color: var(--primary);"><i data-lucide="graduation-cap"></i></div>
+                            <span style="font-size: 24px; font-weight: 800; color: var(--text-main);">Education</span>
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 25px;">
+                            <!-- Southeast University -->
+                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="font-size: 19px; font-weight: 800; color: var(--text-main);">Southeast University</span>
+                                    <span style="font-size: 13px; font-weight: 700; color: var(--primary); border: 1px solid var(--primary); padding: 2px 10px; border-radius: 20px;">2002 - 2006</span>
+                                </div>
+                                <div style="font-size: 14px; color: var(--text-muted); font-weight: 600;">Mechanical Engineering</div>
+                                <div style="font-size: 14px; color: var(--text-muted); line-height: 1.5; font-weight: 500; margin-top: 3px;">
+                                    ▪ Mechanical engineering fundamentals, mechanics, materials, and 2D/3D CAD mold flow analysis
+                                </div>
+                            </div>
+                            
+                            <!-- NTUST -->
+                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="font-size: 19px; font-weight: 800; color: var(--text-main);">NTUST</span>
+                                    <span style="font-size: 13px; font-weight: 700; color: var(--primary); border: 1px solid var(--primary); padding: 2px 10px; border-radius: 20px;">2025 - 2027</span>
+                                </div>
+                                <div style="font-size: 14px; color: var(--text-muted); font-weight: 600;">Master, EMRD</div>
+                                <div style="font-size: 14px; color: var(--text-muted); line-height: 1.5; font-weight: 500; margin-top: 3px;">
+                                    ▪ Integrating AI, tech analysis, and product management to cultivate R&D leadership and cross-disciplinary integration.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Experience -->
+                    <div class="competency-card fade-up-item delay-2" style="left: 660px; top: 150px; width: 540px; height: 430px; padding: 35px; display: flex; flex-direction: column; justify-content: flex-start; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div style="display: flex; align-items: center; gap: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">
+                            <div class="minimal-icon-badge" style="margin-bottom: 0; color: var(--primary);"><i data-lucide="briefcase"></i></div>
+                            <span style="font-size: 24px; font-weight: 800; color: var(--text-main);">Experience</span>
+                        </div>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 25px;">
+                            <!-- Behavior Tech -->
+                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="font-size: 19px; font-weight: 800; color: var(--text-main);">Behavior Tech</span>
+                                    <span style="font-size: 13px; font-weight: 700; color: var(--primary); border: 1px solid var(--primary); padding: 2px 10px; border-radius: 20px;">2007 - 2009</span>
+                                </div>
+                                <div style="font-size: 14px; color: var(--text-muted); font-weight: 600;">Mechanical Engineer</div>
+                                <div style="font-size: 14px; color: var(--text-muted); line-height: 1.5; font-weight: 500; margin-top: 3px;">
+                                    ▪ Keyboard, mouse, and EPC computer mechanical design, prototyping, and tooling review.
+                                </div>
+                            </div>
+                            
+                            <!-- ZYLUX -->
+                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span style="font-size: 19px; font-weight: 800; color: var(--text-main);">ZYLUX</span>
+                                    <span style="font-size: 13px; font-weight: 700; color: var(--primary); border: 1px solid var(--primary); padding: 2px 10px; border-radius: 20px;">2009 - NOW</span>
+                                </div>
+                                <div style="font-size: 14px; color: var(--text-muted); font-weight: 600;">R&D Manager</div>
+                                <div style="font-size: 14px; color: var(--text-muted); line-height: 1.5; font-weight: 500; margin-top: 3px;">
+                                    ▪ NB, AIO, and Soundbar acoustic product development planning and roadmap formulation.<br>
+                                    ▪ Acoustic COMSOL simulation analysis and cross-departmental R&D management.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Bottom center summary bar -->
+                    <div class="fade-up-item delay-4" style="position: absolute; left: 80px; top: 595px; width: 1120px; height: 50px; font-size: 16px; font-weight: 700; color: var(--text-main); display: flex; align-items: center; justify-content: center; border-radius: 15px; border: 1px solid var(--border-color); background: #ffffff;">
+                        Proven capability from technology development to R&D workflow optimization
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 3 -->
+            <section class="slide" data-slide-index="3">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Core Competencies</div>
+
+                    <!-- Left Card: System Integration -->
+                    <div class="competency-card fade-up-item delay-1" style="left: 80px; top: 150px; width: 350px; height: 490px; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div>
+                            <div class="minimal-icon-badge" style="color: var(--primary);"><i data-lucide="network"></i></div>
+                            <div style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 25px; line-height: 1.3;">System Integration R&D<br><span style="font-size: 15px; color: var(--primary); font-weight: 700;">(15+ Years Exp)</span></div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%;"></span>
+                                        Systemic Perspective
+                                    </div>
+                                    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 500; padding-left: 14px;">
+                                        Focuses on holistic system engineering rather than isolated components, integrating mechanics, acoustics, and manufacturing constraints.
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%;"></span>
+                                        Production Lifecycle
+                                    </div>
+                                    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 500; padding-left: 14px;">
+                                        Collaborated deeply with top NB brands and leading ODMs, leading product development lifecycles from early concept to mass production.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Center Card: Mechanical Engineering (Speaker drawing removed) -->
+                    <div class="competency-card fade-up-item delay-2" style="left: 465px; top: 150px; width: 350px; height: 490px; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div>
+                            <div class="minimal-icon-badge" style="color: var(--primary);"><i data-lucide="wrench"></i></div>
+                            <div style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 25px; line-height: 1.3;">Mechanical Design<br><span style="font-size: 15px; color: var(--primary); font-weight: 700;">(15 Years Exp)</span></div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%;"></span>
+                                        Tooling & Enclosure R&D
+                                    </div>
+                                    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 500; padding-left: 14px;">
+                                        Proficient in plastic and precision structure development. Accurately evaluates spatial layouts, structural strength, and high-volume assembly feasibility.
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%;"></span>
+                                        Engineering CAD Tools
+                                    </div>
+                                    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 500; padding-left: 14px;">
+                                        Proficient in Creo, SolidWorks, AutoCAD, and other mainstream 3D mechanical CAD software to build standardized models.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Right Card: Acoustic Development -->
+                    <div class="competency-card fade-up-item delay-3" style="left: 850px; top: 150px; width: 350px; height: 490px; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div>
+                            <div class="minimal-icon-badge" style="color: var(--primary);"><i data-lucide="volume-2"></i></div>
+                            <div style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 25px; line-height: 1.3;">Acoustics & Transducer R&D<br><span style="font-size: 15px; color: var(--primary); font-weight: 700;">(10+ Years Exp)</span></div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%;"></span>
+                                        Acoustic System Integration
+                                    </div>
+                                    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 500; padding-left: 14px;">
+                                        Focuses on NB, AIO, Soundbar, and portable audio systems, conducting precise COMSOL acoustic-structure and sound field simulations.
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="font-size: 16px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 6px; height: 6px; background-color: var(--primary); border-radius: 50%;"></span>
+                                        Transducer Engineering
+                                    </div>
+                                    <div style="font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 500; padding-left: 14px;">
+                                        Micro-speaker customization and driver development. Highly skilled in Klippel and SoundCheck for electro-acoustic analysis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 4 -->
+            <section class="slide" data-slide-index="4">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Core Values</div>
+ 
+                    <!-- Bento Card 1: 系統性問題解決 -->
+                    <div class="value-card fade-up-item delay-1" style="left: 80px; top: 150px; width: 545px; height: 230px; padding: 25px 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="minimal-icon-badge" style="margin-bottom: 0; color: var(--primary); width: 40px; height: 40px;"><i data-lucide="layout-grid" style="width: 30px !important; height: 30px !important;"></i></div>
+                            <div class="value-card-title" style="font-size: 26px; font-weight: 800; color: var(--text-main);">Systematic Problem Solving</div>
+                        </div>
+                        <div class="value-card-desc" style="font-size: 17px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">
+                            Simultaneously evaluates spatial constraints, acoustics, structures, materials, processes, and costs to find the global optimum rather than local sub-optimizations.
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: var(--primary); padding-left: 55px; margin-top: 8px;">
+                            <span>▪ Cross-disciplinary planning to minimize optimization trade-offs</span>
+                            <span>▪ Multidisciplinary mechanics & acoustics co-design</span>
+                        </div>
+                    </div>
+ 
+                    <!-- Bento Card 2: 模擬支援決策 -->
+                    <div class="value-card fade-up-item delay-2" style="left: 655px; top: 150px; width: 545px; height: 230px; padding: 25px 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="minimal-icon-badge" style="margin-bottom: 0; color: var(--primary); width: 40px; height: 40px;"><i data-lucide="line-chart" style="width: 30px !important; height: 30px !important;"></i></div>
+                            <div class="value-card-title" style="font-size: 26px; font-weight: 800; color: var(--text-main);">Simulation-Driven Decisions</div>
+                        </div>
+                        <div class="value-card-desc" style="font-size: 17px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">
+                            Leverages virtual prototyping early to reduce physical trial-and-error costs, detecting acoustic and structural risks early to guide the design path.
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: var(--primary); padding-left: 55px; margin-top: 8px;">
+                            <span>▪ Multiphysics coupling via COMSOL for early validation</span>
+                            <span>▪ Replaced 50% of physical prototyping cycles & costs</span>
+                        </div>
+                    </div>
+ 
+                    <!-- Bento Card 3: 量產導向設計 -->
+                    <div class="value-card fade-up-item delay-3" style="left: 80px; top: 410px; width: 545px; height: 230px; padding: 25px 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="minimal-icon-badge" style="margin-bottom: 0; color: var(--primary); width: 40px; height: 40px;"><i data-lucide="factory" style="width: 30px !important; height: 30px !important;"></i></div>
+                            <div class="value-card-title" style="font-size: 26px; font-weight: 800; color: var(--text-main);">Design for Manufacturing</div>
+                        </div>
+                        <div class="value-card-desc" style="font-size: 17px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">
+                            Simultaneously considers tooling, assembly, yields, and consistency, bridging R&D with factory mass production.
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: var(--primary); padding-left: 55px; margin-top: 8px;">
+                            <span>▪ Jig tolerances and acoustic consistency assessments</span>
+                            <span>▪ Comprehensive Design for Manufacturing (DFM) reviews</span>
+                        </div>
+                    </div>
+ 
+                    <!-- Bento Card 4: 經驗工具化 -->
+                    <div class="value-card fade-up-item delay-4" style="left: 655px; top: 410px; width: 545px; height: 230px; padding: 25px 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="minimal-icon-badge" style="margin-bottom: 0; color: var(--primary); width: 40px; height: 40px;"><i data-lucide="wrench" style="width: 30px !important; height: 30px !important;"></i></div>
+                            <div class="value-card-title" style="font-size: 26px; font-weight: 800; color: var(--text-main);">Turning Experience into Tools</div>
+                        </div>
+                        <div class="value-card-desc" style="font-size: 17px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">
+                            Transforms spreadsheet computations and engineering heuristics into automated applications, boosting cross-departmental efficiency.
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: var(--primary); padding-left: 55px; margin-top: 8px;">
+                            <span>▪ Automated parameter extraction & electro-magnetic specifications</span>
+                            <span>▪ Standardized data pipelines to eliminate human communication errors</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 5 -->
+            <section class="slide" data-slide-index="5">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Finite Element Analysis</div>
+                    
+                    <!-- Left FEA Plot Card (Reframed original simulation image) -->
+                    <div class="fea-feature-box fade-up-item delay-1" style="left: 80px; top: 150px; width: 350px; height: 430px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="img-hover-zoom" style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; background: #ffffff; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; padding: 8px;">
+                            <img src="assets/images/image11.png" alt="Displacement Simulation" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <div class="fea-feature-title" style="font-size: 20px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <i data-lucide="box" style="width: 32px !important; height: 32px !important; color: var(--primary);"></i>
+                                Structural Displacement Prediction
+                            </div>
+                            <div class="fea-feature-desc" style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">Analyzes speaker vibration modes early to prevent structural resonance and rattle noise.</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Center FEA Plot Card (Reframed original simulation image) -->
+                    <div class="fea-feature-box fade-up-item delay-2" style="left: 465px; top: 150px; width: 350px; height: 430px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="img-hover-zoom" style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; background: #ffffff; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; padding: 8px; position: relative;">
+                            <img src="assets/images/image9.png" alt="Magnetic Field Simulation" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                            <span style="position: absolute; left: 10px; top: 8px; font-size: 10px; font-weight: 700; color: var(--text-muted); background: rgba(255,255,255,0.85); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color);">mm</span>
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <div class="fea-feature-title" style="font-size: 20px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <i data-lucide="magnet" style="width: 32px !important; height: 32px !important; color: var(--primary);"></i>
+                                Magnetic Performance Optimization
+                            </div>
+                            <div class="fea-feature-desc" style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">Simulates transducer magnetic circuits to maximize motor drive force within minimal dimensions.</div>
+                        </div>
+                    </div>
+ 
+                    <!-- Right FEA Plot Card (Reframed original simulation image) -->
+                    <div class="fea-feature-box fade-up-item delay-3" style="left: 850px; top: 150px; width: 350px; height: 430px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="img-hover-zoom" style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; background: #ffffff; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; padding: 8px; position: relative;">
+                            <img src="assets/images/image12.png" alt="Acoustic Field Simulation" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                            <span style="position: absolute; right: 10px; bottom: 8px; font-size: 10px; font-weight: 700; color: var(--text-muted); background: rgba(255,255,255,0.85); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color);">mm</span>
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <div class="fea-feature-title" style="font-size: 20px; font-weight: 800; color: var(--text-main); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <i data-lucide="volume-2" style="width: 32px !important; height: 32px !important; color: var(--primary);"></i>
+                                System Acoustic Field Analysis
+                            </div>
+                            <div class="fea-feature-desc" style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; font-weight: 500;">Predicts acoustic paths and response properties to guarantee the system reaches the target SPL.</div>
+                        </div>
+                    </div>
+ 
+                    <!-- Bottom Summary Banner -->
+                    <div class="fade-up-item delay-4" style="position: absolute; left: 80px; top: 595px; width: 1120px; height: 50px; font-size: 13.5px; font-weight: 700; color: var(--text-main); display: flex; align-items: center; justify-content: center; border-radius: 15px; border: 1px solid var(--border-color); background: #ffffff;">
+                        Leveraging COMSOL for micro-speaker and system acoustic simulations to support early-stage design decisions and minimize tooling modifications.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 6 -->
+            <section class="slide" data-slide-index="6">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Project Experience</div>
+ 
+                    <!-- Left Column: Case A - Soundbar (Reframed original soundbar image) -->
+                    <div class="project-card-v2 fade-up-item delay-1" style="left: 80px; top: 140px; width: 540px; height: 520px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="project-case-title" style="font-size: 26px; font-weight: 800; color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; width: 100%;">Case A: Soundbar</div>
+                        <div class="project-img-wrapper img-hover-zoom" style="height: 200px; display: flex; align-items: center; justify-content: center; width: 100%; margin: 15px 0; background-color: #ffffff; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid var(--border-color);">
+                            <img src="assets/images/image13.png" alt="Soundbar Product" style="width: 100%; height: 100%; object-fit: contain; z-index: 5; transform: scale(1.22);">
+                        </div>
+                        <div class="project-info-grid" style="display: flex; flex-direction: column; gap: 8px; text-align: left; width: 100%;">
+                            <div class="info-block" style="margin-bottom: 4px;">
+                                <div class="info-label-badge" style="width: 110px; color: #b91c1c;">
+                                    <i data-lucide="alert-circle" style="width: 18px; height: 18px; color: #b91c1c;"></i>
+                                    <span>Constraint</span>
+                                </div>
+                                <div class="info-text" style="font-size: 13.5px; font-weight: 600; color: #b91c1c; line-height: 1.45;">Highly restricted spatial volume failing to meet client's target low-frequency bass extension</div>
+                            </div>
+                            
+                            <div class="info-block" style="margin-bottom: 4px;">
+                                <div class="info-label-badge" style="width: 110px; color: #4338ca;">
+                                    <i data-lucide="user" style="width: 18px; height: 18px; color: #4338ca;"></i>
+                                    <span>My Role</span>
+                                </div>
+                                <div class="info-text" style="font-size: 13.5px; font-weight: 600; color: var(--text-main); line-height: 1.45;">System-level planning, electro-acoustic design formulation, and mechanical architecture</div>
+                            </div>
+                            
+                            <div class="info-block">
+                                <div class="info-label-badge" style="width: 110px; color: #15803d;">
+                                    <i data-lucide="key" style="width: 18px; height: 18px; color: #15803d;"></i>
+                                    <span>Design Key</span>
+                                </div>
+                                <div class="info-text" style="font-size: 13.5px; font-weight: 600; color: #15803d; line-height: 1.45;">Balancing volumetric spatial limits with acoustic output performance</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Case B - Conference speaker (Reframed original conference speaker image) -->
+                    <div class="project-card-v2 fade-up-item delay-2" style="left: 660px; top: 140px; width: 540px; height: 520px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="project-case-title" style="font-size: 26px; font-weight: 800; color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; width: 100%;">Case B: Conference speaker</div>
+                        <div class="project-img-wrapper img-hover-zoom" style="height: 200px; display: flex; align-items: center; justify-content: center; width: 100%; margin: 15px 0; background-color: #ffffff; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid var(--border-color);">
+                            <img src="assets/images/image14.png" alt="Conference Speaker Product" style="width: 100%; height: 100%; object-fit: contain; z-index: 5;">
+                        </div>
+                        <div class="project-info-grid" style="display: flex; flex-direction: column; gap: 8px; text-align: left; width: 100%;">
+                            <div class="info-block" style="margin-bottom: 4px;">
+                                <div class="info-label-badge" style="width: 110px; color: #b91c1c;">
+                                    <i data-lucide="alert-circle" style="width: 18px; height: 18px; color: #b91c1c;"></i>
+                                    <span>Constraint</span>
+                                </div>
+                                <div class="info-text" style="font-size: 13.5px; font-weight: 600; color: #b91c1c; line-height: 1.45;">Challenges in integrating highly dense functions into a miniaturized volume</div>
+                            </div>
+                            
+                            <div class="info-block" style="margin-bottom: 4px;">
+                                <div class="info-label-badge" style="width: 110px; color: #4338ca;">
+                                    <i data-lucide="user" style="width: 18px; height: 18px; color: #4338ca;"></i>
+                                    <span>My Role</span>
+                                </div>
+                                <div class="info-text" style="font-size: 13.5px; font-weight: 600; color: var(--text-main); line-height: 1.45;">Vertical integration from mechanical layout, acoustic simulation to driver development</div>
+                            </div>
+                            
+                            <div class="info-block">
+                                <div class="info-label-badge" style="width: 110px; color: #15803d;">
+                                    <i data-lucide="key" style="width: 18px; height: 18px; color: #15803d;"></i>
+                                    <span>Design Key</span>
+                                </div>
+                                <div class="info-text" style="font-size: 13.5px; font-weight: 600; color: #15803d; line-height: 1.45;">Enclosure optimization and electro-acoustic balancing for multi-functional systems</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 7 -->
+            <section class="slide" data-slide-index="7">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Upgrading to AI</div>
+                    
+                    <!-- Column 1: Traditional Excel -->
+                    <div class="flow-card fade-up-item delay-1" style="position: absolute; left: 80px; top: 140px; width: 350px; height: 480px; padding: 25px 20px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="minimal-icon-badge" style="color: #b91c1c; margin-bottom: 5px;"><i data-lucide="file-spreadsheet"></i></div>
+                        <div style="font-size: 11px; font-weight: 800; color: #b91c1c; background: rgba(185, 28, 28, 0.05); padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid rgba(185, 28, 28, 0.15); margin-bottom: 5px;">
+                            <span>⚠️ Traditional Excel Flow</span>
+                        </div>
+                        <div class="flow-hdr" style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 10px;">Traditional Spreadsheet Calculations</div>
+                        
+                        <!-- Redesigned full-width centered list rows with WARNING icons -->
+                        <div class="flow-bullets-center" style="display: flex; flex-direction: column; justify-content: center; width: 100%; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; background: #ffffff; margin-bottom: 15px; text-align: left;">
+                            <div style="font-size: 12.5px; color: #b91c1c; font-weight: 700; padding: 10px 14px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="x-circle" style="width: 16px !important; height: 16px !important; flex-shrink: 0;"></i>
+                                Point-to-point isolated files, out-of-sync cross-dept data
+                            </div>
+                            <div style="font-size: 12.5px; color: #b91c1c; font-weight: 700; padding: 10px 14px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="x-circle" style="width: 16px !important; height: 16px !important; flex-shrink: 0;"></i>
+                                Heavily dependent on individual experience, non-standardized formulas
+                            </div>
+                            <div style="font-size: 12.5px; color: #b91c1c; font-weight: 700; padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="x-circle" style="width: 16px !important; height: 16px !important; flex-shrink: 0;"></i>
+                                High risk of parameter misapplication, costly post-tooling changes
+                            </div>
+                        </div>
+                        
+                        <!-- Excel Graphic Mockup (Red warning style) -->
+                        <div class="excel-graphic-mockup" style="width: 160px; height: 70px; border: 1px dashed rgba(185, 28, 28, 0.3); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px; background: rgba(185, 28, 28, 0.01);">
+                            <div style="display: flex; gap: 4px; border-bottom: 1px solid rgba(185, 28, 28, 0.15); padding-bottom: 4px; align-items: center;">
+                                <i data-lucide="file-spreadsheet" style="width: 12px; height: 12px; color: #b91c1c;"></i>
+                                <span style="font-size: 9px; font-weight: 700; color: #b91c1c; letter-spacing: 0.05em;">EXCEL_DATA.XLSX</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; height: 100%;">
+                                <div style="background: rgba(185, 28, 28, 0.15); border-radius: 2px;"></div>
+                                <div style="background: rgba(185, 28, 28, 0.05); border-radius: 2px;"></div>
+                                <div style="background: rgba(185, 28, 28, 0.05); border-radius: 2px;"></div>
+                                <div style="background: rgba(185, 28, 28, 0.05); border-radius: 2px;"></div>
+                                
+                                <div style="background: rgba(185, 28, 28, 0.05); border-radius: 2px;"></div>
+                                <div style="background: rgba(185, 28, 28, 0.15); border-radius: 2px;"></div>
+                                <div style="background: rgba(185, 28, 28, 0.05); border-radius: 2px;"></div>
+                                <div style="background: rgba(185, 28, 28, 0.05); border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Column 2: AI Transition Channel with Sequential Chevron Flow -->
+                    <div class="flow-card flow-card-violet fade-up-item delay-2" style="position: absolute; left: 465px; top: 140px; width: 350px; height: 480px; border-radius: 20px; padding: 25px 20px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; overflow: hidden; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <!-- Top Sparkles badge -->
+                        <div class="minimal-icon-badge" style="color: var(--primary); margin-bottom: 5px;"><i data-lucide="sparkles"></i></div>
+                        <div style="font-size: 11px; font-weight: 800; color: var(--primary); background: rgba(79, 70, 229, 0.06); padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid rgba(79, 70, 229, 0.15); margin-bottom: 5px; display: inline-flex; align-items: center; gap: 4px;">
+                            <span>AI Engine</span>
+                        </div>
+
+                        <!-- AI Tech Style Cosmic Orbit Conversion (Larger & Centered) -->
+                        <div style="position: relative; width: 100%; height: 240px; margin: 5px 0; display: flex; justify-content: center; align-items: center;">
+                            <!-- AI Engine Node (Centered Large Logo) -->
+                            <div style="position: relative; width: 220px; height: 220px; z-index: 5; display: flex; align-items: center; justify-content: center;">
+                                <!-- Glow Background -->
+                                <div class="ai-hex-glow" style="position: absolute; width: 240px; height: 240px; background: radial-gradient(circle, rgba(79, 70, 229, 0.28) 0%, transparent 70%); animation: hex-pulse-glow 2s infinite alternate; pointer-events: none;"></div>
+                                
+                                <!-- AI Chip & 3D Orbiting Planets SVG -->
+                                <svg width="220" height="220" viewBox="0 0 220 220" style="position: absolute; overflow: visible;">
+                                    <defs>
+                                        <radialGradient id="gradient-center-core" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="#818cf8" />
+                                            <stop offset="100%" stop-color="#4f46e5" />
+                                        </radialGradient>
+                                    </defs>
+                                    
+                                    <!-- Orbit Lines (Faint dotted tilted ellipses) -->
+                                    <ellipse cx="110" cy="110" rx="75" ry="22.5" fill="none" stroke="rgba(129, 140, 248, 0.22)" stroke-width="1.2" stroke-dasharray="2, 4" transform="rotate(-20 110 110)" />
+                                    <ellipse cx="110" cy="110" rx="90" ry="22.5" fill="none" stroke="rgba(244, 63, 94, 0.22)" stroke-width="1.2" stroke-dasharray="2, 4" transform="rotate(15 110 110)" />
+                                    <ellipse cx="110" cy="110" rx="60" ry="21" fill="none" stroke="rgba(16, 185, 129, 0.22)" stroke-width="1.2" stroke-dasharray="2, 4" transform="rotate(45 110 110)" />
+
+                                    <!-- Floating Fine Particles (Decorative Ambient Drift) -->
+                                    <circle cx="35" cy="55" r="1.5" fill="rgba(129, 140, 248, 0.55)" class="floating-particle-1" />
+                                    <circle cx="185" cy="40" r="1" fill="rgba(129, 140, 248, 0.45)" class="floating-particle-2" />
+                                    <circle cx="45" cy="170" r="2" fill="rgba(79, 70, 229, 0.55)" class="floating-particle-3" />
+                                    <circle cx="175" cy="160" r="1.5" fill="rgba(129, 140, 248, 0.5)" class="floating-particle-4" />
+
+                                    <!-- Revolving Planet-like Spheres -->
+                                    <!-- Planet 1: Blue, Outer Orbit (-20deg tilted), Clockwise -->
+                                    <g class="orbit-container-1" style="transform: rotate(-20deg) scaleY(0.3); transform-origin: 110px 110px;">
+                                        <g class="orbit-rotator-clockwise" style="transform-origin: 110px 110px;">
+                                            <circle cx="110" cy="35" r="5" fill="#60a5fa" style="filter: drop-shadow(0 0 6px #60a5fa);" />
+                                        </g>
+                                    </g>
+                                    
+                                    <!-- Planet 2: Rose, Inner Orbit (15deg tilted), Counter-Clockwise -->
+                                    <g class="orbit-container-2" style="transform: rotate(15deg) scaleY(0.25); transform-origin: 110px 110px;">
+                                        <g class="orbit-rotator-counter-1" style="transform-origin: 110px 110px;">
+                                            <circle cx="110" cy="20" r="4" fill="#f43f5e" style="filter: drop-shadow(0 0 5px #f43f5e);" />
+                                        </g>
+                                    </g>
+                                    
+                                    <!-- Planet 3: Green, Medium Orbit (45deg tilted), Clockwise (Slow) -->
+                                    <g class="orbit-container-3" style="transform: rotate(45deg) scaleY(0.35); transform-origin: 110px 110px;">
+                                        <g class="orbit-rotator-clockwise-slow" style="transform-origin: 110px 110px;">
+                                            <circle cx="110" cy="50" r="4.5" fill="#10b981" style="filter: drop-shadow(0 0 5px #10b981);" />
+                                        </g>
+                                    </g>
+
+                                    <!-- Rotating AI Chip Group (Clockwise, slow, centered at 110,110) -->
+                                    <g class="rotating-chip" style="transform-origin: 110px 110px;">
+                                        <!-- Pins - Top -->
+                                        <line x1="95" y1="75" x2="95" y2="85" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="110" y1="75" x2="110" y2="85" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="125" y1="75" x2="125" y2="85" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <!-- Pins - Bottom -->
+                                        <line x1="95" y1="135" x2="95" y2="145" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="110" y1="135" x2="110" y2="145" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="125" y1="135" x2="125" y2="145" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <!-- Pins - Left -->
+                                        <line x1="75" y1="95" x2="85" y2="95" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="75" y1="110" x2="85" y2="110" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="75" y1="125" x2="85" y2="125" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <!-- Pins - Right -->
+                                        <line x1="135" y1="95" x2="145" y2="95" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="135" y1="110" x2="145" y2="110" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+                                        <line x1="135" y1="125" x2="145" y2="125" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+
+                                        <!-- Main Chip body -->
+                                        <rect x="85" y="85" width="50" height="50" rx="8" fill="url(#gradient-center-core)" stroke="#ffffff" stroke-width="2" style="filter: drop-shadow(0 0 10px rgba(79, 70, 229, 0.6));" />
+                                        <!-- Chip Core details -->
+                                        <rect x="95" y="95" width="30" height="30" rx="3" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" />
+                                        <!-- No center white dot -->
+                                    </g>
+                                </svg>
+                                <!-- Central AI Text (Stationary in 3D center) -->
+                                <span style="position: absolute; color: #ffffff; font-size: 20px; font-weight: 800; z-index: 10; font-family: var(--font-heading) !important; pointer-events: none; transform: translateY(-0.5px); text-shadow: 0 0 5px rgba(79,70,229,0.8);">AI</span>
+                            </div>
+                        </div>
+
+                        <!-- Completely Restored Original Text -->
+                        <div style="text-align: center; width: 100%;">
+                            <div class="flow-hdr" style="font-size: 20px; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">AI-Assisted Digital Transition</div>
+                            <div style="font-size: 14px; color: var(--text-muted); font-weight: 600; line-height: 1.45; padding: 0 10px;">
+                                Converting engineering expertise into<br>
+                                <span style="font-weight: 800; color: var(--primary);">executable methodologies and software tools</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Column 3: Factory-Ready -->
+                    <div class="flow-card fade-up-item delay-3" style="position: absolute; left: 850px; top: 140px; width: 350px; height: 480px; padding: 25px 20px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="minimal-icon-badge" style="color: #15803d; margin-bottom: 5px;"><i data-lucide="trending-up"></i></div>
+                        <div style="font-size: 11px; font-weight: 800; color: #15803d; background: rgba(21, 128, 61, 0.05); padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid rgba(21, 128, 61, 0.15); margin-bottom: 5px;">
+                            <span>✅ Factory-Ready Flow</span>
+                        </div>
+                        <div class="flow-hdr" style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 10px;">Factory-Ready Digital Solutions</div>
+                        
+                        <!-- Redesigned full-width centered list rows with SUCCESS checkmarks -->
+                        <div class="flow-bullets-center" style="display: flex; flex-direction: column; justify-content: center; width: 100%; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; background: #ffffff; margin-bottom: 15px; text-align: left;">
+                            <div style="font-size: 12.5px; color: #15803d; font-weight: 700; padding: 10px 14px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="check-circle" style="width: 16px !important; height: 16px !important; flex-shrink: 0;"></i>
+                                Cloud-integrated workflow, real-time database synchronization
+                            </div>
+                            <div style="font-size: 12.5px; color: #15803d; font-weight: 700; padding: 10px 14px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="check-circle" style="width: 16px !important; height: 16px !important; flex-shrink: 0;"></i>
+                                Automated parameter extraction & back-calculation, zero spec mismatch
+                            </div>
+                            <div style="font-size: 12.5px; color: #15803d; font-weight: 700; padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="check-circle" style="width: 16px !important; height: 16px !important; flex-shrink: 0;"></i>
+                                Direct data pipeline to factory production parameters, securing yield rate
+                            </div>
+                        </div>
+                        
+                        <!-- Factory Ready Dashboard Grid (Green style, matching Excel grid on left) -->
+                        <div class="excel-graphic-mockup" style="width: 160px; height: 70px; border: 1px dashed rgba(21, 128, 61, 0.3); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; gap: 4px; background: rgba(21, 128, 61, 0.01); text-align: left;">
+                            <div style="display: flex; gap: 4px; border-bottom: 1px solid rgba(21, 128, 61, 0.15); padding-bottom: 4px; align-items: center;">
+                                <i data-lucide="layout-dashboard" style="width: 12px; height: 12px; color: #15803d;"></i>
+                                <span style="font-size: 9px; font-weight: 700; color: #15803d; letter-spacing: 0.05em;">FACTORY_TOOL.EXE</span>
+                            </div>
+                            <div style="display: flex; gap: 6px; align-items: center; height: 100%;">
+                                <!-- Line Chart SVG Mockup -->
+                                <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+                                    <path d="M5 25L15 12L25 18L35 6L45 10L55 3" stroke="#15803d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="35" cy="6" r="2.5" fill="#15803d"/>
+                                    <line x1="5" y1="28" x2="55" y2="28" stroke="rgba(21, 128, 61, 0.2)" stroke-width="1"/>
+                                </svg>
+                                <!-- Parameters Mockup -->
+                                <div style="display: flex; flex-direction: column; gap: 3px; flex-grow: 1;">
+                                    <div style="width: 100%; height: 5px; background: rgba(21, 128, 61, 0.15); border-radius: 2px;"></div>
+                                    <div style="width: 80%; height: 5px; background: rgba(21, 128, 61, 0.08); border-radius: 2px;"></div>
+                                    <div style="width: 90%; height: 5px; background: rgba(21, 128, 61, 0.08); border-radius: 2px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 8 -->
+            <section class="slide" data-slide-index="8">
+                <div class="slide-stage" style="background: #ffffff;">
+                    <div class="slide-title-standard fade-up-item">Acoustic System: AI-Assisted Acoustic Development System</div>
+                    
+                    <!-- Column 1: Module 1 (Reframed original software screenshot, no window mockups) -->
+                    <div class="sys-col fade-up-item delay-1" style="left: 80px; top: 160px; width: 350px; height: 430px; display: flex; flex-direction: column; padding: 20px; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="sys-col-img-wrapper img-hover-zoom" style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <img src="assets/images/image18.png" alt="Software View 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="sys-module-card" style="position: static; width: 100%; padding-top: 25px; padding-left: 5px; padding-right: 5px; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+                            <div class="sys-module-title" style="border-left: 3px solid var(--primary); padding-left: 8px; margin-bottom: 12px; font-size: 22px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="layout-dashboard" style="width: 22px !important; height: 22px !important; color: var(--primary);"></i>
+                                Normalized System Analysis
+                            </div>
+                            <div class="sys-module-desc" style="font-size: 15.5px; line-height: 1.6;">
+                                Real-time calculation of 3D enclosure resonance and acoustic boundaries to support early decisions.
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Column 2: Module 2 (Reframed original software screenshot, no window mockups) -->
+                    <div class="sys-col fade-up-item delay-2" style="left: 465px; top: 160px; width: 350px; height: 430px; display: flex; flex-direction: column; padding: 20px; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="sys-col-img-wrapper img-hover-zoom" style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <img src="assets/images/image19.png" alt="Software View 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="sys-module-card" style="position: static; width: 100%; padding-top: 25px; padding-left: 5px; padding-right: 5px; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+                            <div class="sys-module-title" style="border-left: 3px solid var(--primary); padding-left: 8px; margin-bottom: 12px; font-size: 22px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="target" style="width: 22px !important; height: 22px !important; color: var(--primary);"></i>
+                                Voice Coil Specification Design
+                            </div>
+                            <div class="sys-module-desc" style="font-size: 15.5px; line-height: 1.6;">
+                                Precise voice-coil wire weight and magnetic flux calculations to guarantee driver accuracy.
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Column 3: Module 3 (Reframed original software screenshot, no window mockups) -->
+                    <div class="sys-col fade-up-item delay-3" style="left: 850px; top: 160px; width: 350px; height: 430px; display: flex; flex-direction: column; padding: 20px; justify-content: space-between; border: 1px solid var(--border-color) !important; background: #ffffff !important;">
+                        <div class="sys-col-img-wrapper img-hover-zoom" style="width: 100%; height: 180px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+                            <img src="assets/images/image20.png" alt="Software View 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="sys-module-card" style="position: static; width: 100%; padding-top: 25px; padding-left: 5px; padding-right: 5px; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start;">
+                            <div class="sys-module-title" style="border-left: 3px solid var(--primary); padding-left: 8px; margin-bottom: 12px; font-size: 22px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                <i data-lucide="activity" style="width: 22px !important; height: 22px !important; color: var(--primary);"></i>
+                                SPL Frequency Response Prediction
+                            </div>
+                            <div class="sys-module-desc" style="font-size: 15.5px; line-height: 1.6;">
+                                Instant estimation of system sound pressure level response, replacing tedious manual Excel calculations.
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Bottom Summary Banner -->
+                    <div class="fade-up-item delay-4" style="position: absolute; left: 80px; top: 595px; width: 1120px; height: 50px; font-size: 13px; font-weight: 700; color: var(--text-main); display: flex; align-items: center; justify-content: center; border-radius: 15px; border: 1px solid var(--border-color); background: #ffffff;">
+                        Integrating acoustics, mechanics, and simulation to build reproducible engineering processes, shifting R&D from experience-driven to data-driven.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 9 -->
+            <section class="slide bg-dark-blue" data-slide-index="9">
+                <div class="slide-stage" style="background: transparent; box-shadow: none;">
+                    <!-- Footer Decor Image -->
+                    <img src="assets/images/image22.png" alt="Footer Decor" class="pic" style="left: 40px; top: 580px; width: 220px; height: 100px; object-fit: contain; z-index: 3;">
+                    
+                    <div class="thank-you-container" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 4; pointer-events: none; padding-bottom: 20px;">
+                        <h1 class="thank-you-title" style="margin: 0; font-size: 72px; font-weight: 800; color: #ffffff; text-align: center; letter-spacing: 0.05em; text-transform: uppercase;">THANK YOU</h1>
+                        <p class="thank-you-sub" style="margin: 25px 0 0 0; font-size: 20px; font-weight: 400; color: #cbd5e1; text-align: center; letter-spacing: 0.02em;">I look forward to the opportunity to join the team.</p>
+                    </div>
+
+                    <!-- Holographic particle/wave simulation in Slide 9 background -->
+                    <canvas id="slide9Canvas" class="slide9-particle-canvas" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; opacity: 0.35;"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Right Floating Navigation Dots -->
+    <div class="nav-dots" id="navDots">
+        <button class="dot-btn active" data-go-to="1" aria-label="Go to slide 1"></button>
+        <button class="dot-btn" data-go-to="2" aria-label="Go to slide 2"></button>
+        <button class="dot-btn" data-go-to="3" aria-label="Go to slide 3"></button>
+        <button class="dot-btn" data-go-to="4" aria-label="Go to slide 4"></button>
+        <button class="dot-btn" data-go-to="5" aria-label="Go to slide 5"></button>
+        <button class="dot-btn" data-go-to="6" aria-label="Go to slide 6"></button>
+        <button class="dot-btn" data-go-to="7" aria-label="Go to slide 7"></button>
+        <button class="dot-btn" data-go-to="8" aria-label="Go to slide 8"></button>
+        <button class="dot-btn" data-go-to="9" aria-label="Go to slide 9"></button>
+    </div>
+
+    <!-- Bottom HUD Controls Panel -->
+    <div class="hud-controls-panel" id="hudControls">
+        <button class="hud-btn" id="prevBtn" title="Previous Slide (Left Arrow / Scroll Up)">
+            <i data-lucide="chevron-left"></i>
+        </button>
+        
+        <button class="hud-btn" id="playBtn" title="Autoplay">
+            <i data-lucide="play" id="playIcon"></i>
+        </button>
+        
+        <button class="hud-btn" id="nextBtn" title="Next Slide (Right Arrow / Space / Scroll Down)">
+            <i data-lucide="chevron-right"></i>
+        </button>
+        
+        <button class="hud-btn" id="fullscreenBtn" title="Toggle Fullscreen">
+            <i data-lucide="maximize" id="fullscreenIcon"></i>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
